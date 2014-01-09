@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(:version => 20140107233130) do
     t.string   "bio"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "color"
   end
 
 end
