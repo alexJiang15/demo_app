@@ -2,8 +2,9 @@ module UsersHelper
   
   def show_user(user)
     if user.email.blank?
-      "unknown"
+      "unknown".html_safe
     else
-      user.email    
+      user.email
+    end
   end
 end

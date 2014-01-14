@@ -1,0 +1,8 @@
+<h1>Awesome Home Page</h1>
+<hr>
+<h2>Users</h2>
+<p>There are <%= User.all.count %> users in the database.</p>
+<%= render @users %>
+<hr>
+<h2>Latest Post</h2>
+<%= render @latest_micropost %>
