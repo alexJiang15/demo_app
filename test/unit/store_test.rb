@@ -1,19 +1,17 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: stores
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  email      :string(255)
-#  bio        :string(255)
+#  store_id   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  color      :string(255)
 #
 
 require 'test_helper'
 
-class UserTest < ActiveSupport::TestCase
+class StoreTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

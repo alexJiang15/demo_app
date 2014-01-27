@@ -11,11 +11,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140109004142) do
+ActiveRecord::Schema.define(:version => 20140121225530) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
     t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "orders", :force => true do |t|
+    t.string   "status",     :default => "ordered"
+    t.integer  "user_id",                           :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
+
+  create_table "orders_products", :force => true do |t|
+    t.integer "order_id",   :null => false
+    t.integer "product_id", :null => false
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "description"
+    t.decimal  "price",       :precision => 8, :scale => 2
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
+
+  create_table "stores", :force => true do |t|
+    t.string   "name"
+    t.integer  "store_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
